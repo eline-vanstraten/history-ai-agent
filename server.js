@@ -15,7 +15,7 @@ app.get("/api/test", async (req, res) => {
 app.post("/api/chat", async(req,res) => {
   const { prompt } = req.body
   const result = await callAgent(prompt)
-  res.json({ response: result })
+  res.json(result)
 })
 
 app.listen(3000, ()=> console.log("started"))

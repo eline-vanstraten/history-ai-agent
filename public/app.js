@@ -40,14 +40,14 @@ async function sendChat(prompt) {
     const result = await data.json();
 
 
-    console.log(result.response.answer)
+    console.log(result.answer)
 
     let agentDiv = document.createElement("div");
     let agentAnswer = document.createElement("div");
     let agentToolsUsed = document.createElement("div");
 
-    agentAnswer.innerHTML = micromark(result.response.answer.message);
-    agentToolsUsed.innerHTML = result.response.answer.toolsUsed;
+    agentAnswer.innerHTML = micromark(result.answer.message);
+    agentToolsUsed.innerHTML = result.answer.toolsUsed;
 
     agentDiv.classList.add("agent-bubble");
     agentToolsUsed.classList.add("agent-tools");

@@ -1,6 +1,6 @@
 import { AzureChatOpenAI } from "@langchain/openai"
 import { createAgent } from "langchain";
-import { rollDice } from "./tools.js";
+import { getDocument ,rollDice } from "./tools.js";
 import { MemorySaver } from "@langchain/langgraph";
 import * as z from "zod";
 
@@ -15,9 +15,9 @@ const myToolResponse = z.object({
 const agent = createAgent({
     model,
     responseFormat: myToolResponse,
-    tools: [rollDice],
+    tools: [getDocument, rollDice],
     checkpointer,
-    systemPrompt: "Je bent iemand die alles weet over de geschiedenis tijdvakken voor zowel HAVO als VWO. Jij zorgt ervoor dat studenten de 10 tijdvakken onder de knie krijgen en de juiste volgorde ervan weten. Voor elk getal dat je gooit geef je het bijbehorende tijdvak.",
+    systemPrompt: "Je bent iemand die alles weet over de geschiedenis tijdvakken voor zowel HAVO als VWO. Jij zorgt ervoor dat studenten de 10 tijdvakken onder de knie krijgen en de juiste volgorde ervan weten. Voor elk getal dat je gooit geef je het bijbehorende tijdvak uit de document.",
 })
 
 export async function callAgent(prompt) {
