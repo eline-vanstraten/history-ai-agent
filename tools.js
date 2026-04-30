@@ -49,3 +49,28 @@ export const rollDice = tool(
         },
     },
 );
+
+export const getHistoricalImage = tool(
+    async ({ query }) => {
+        //spaties en speciale tekens veilig omgezet naar een url om te kunnen zoeken, per pagina 1 foto nodig, taal op nederlands.
+        const response = await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&locale=nl-NL`, {
+            headers: {
+                //meesturen api key
+                Authorization: process.env.PEXELS_API_KEY
+            }
+        });
+         console.log("🔧 now searching pexel for a fitting image")
+        const data = await response.json();
+        //neem de eerste foto, kijk of foto bestaat pak dan medium grootte, zo niet geen afbeelding
+        return data.photos[0]?.src?.medium || "Geen afbeelding gevonden";
+    },
+    {
+        name: "get_image",
+        description: "Zoek een historische afbeelding die past bij een kenmerkend aspect. Negeer nummers en cijfers dus geef daar geen foto's voor.",
+        schema: {
+            type: "object",
+            properties: { query: { type: "string" } },
+            required: ["query"]
+        }
+    }
+);
