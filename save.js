@@ -44,6 +44,14 @@ console.log("✅ vector store saved!")
 
 const prompt = "Welke kenmerkende aspecten bevat tijdvak 1"
 const relevantDocs = await vectorStore.similaritySearch(prompt);
+
+console.log("\n--- BRON CHECK ---");
+//check voor juiste docs, voor elke docs die relevant is checken waar de informatie vandaan komt, bestandsnaam ophalen 
+relevantDocs.forEach((doc, index) => {
+    const bron = doc.metadata.source.split('/').pop();
+    console.log(`Fragment ${index + 1} komt uit: ${bron}`)
+})
+
 const context = relevantDocs.map(doc => doc.pageContent).join("\n\n")
 
 console.log(`Found ${relevantDocs.length} relevant documents`)

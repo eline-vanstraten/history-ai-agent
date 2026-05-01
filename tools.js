@@ -69,7 +69,8 @@ export const getHistoricalImage = tool(
         description: "Zoek een historische afbeelding die past bij een kenmerkend aspect. Negeer nummers en cijfers dus geef daar geen foto's voor.",
         schema: {
             type: "object",
-            properties: { query: { type: "string" } },
+            properties: { 
+                query: { type: "string" } },
             required: ["query"]
         }
     }
