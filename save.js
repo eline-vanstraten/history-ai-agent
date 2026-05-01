@@ -50,6 +50,6 @@ console.log(`Found ${relevantDocs.length} relevant documents`)
 console.log(context)
 
 
-const response = await model.invoke(`je krijgt de volgende vraag : ${prompt}, geef het antwoord door deze tekst te lezen ${context}.`);
+const response = await model.invoke(`je krijgt de volgende vraag : ${prompt}, geef het antwoord door deze tekst te lezen ${context}. Als het antwoord niet in de tekst staat, zeg dat dan eerlijk.`);
 
 console.log(response.content)
