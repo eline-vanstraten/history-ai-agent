@@ -25,7 +25,7 @@ for (const file of files) {
 }
 
 // opsplitsen
-const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000, chunkOverlap: 200 });
+const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000, chunkOverlap: 400 });
 const chunks = await textSplitter.splitDocuments(allDocs);
 
 // log
@@ -58,6 +58,6 @@ console.log(`Found ${relevantDocs.length} relevant documents`)
 console.log(context)
 
 
-const response = await model.invoke(`je krijgt de volgende vraag : ${prompt}, geef het antwoord door deze tekst te lezen ${context}. Als het antwoord niet in de tekst staat, zeg dat dan eerlijk.`);
+const response = await model.invoke(`je krijgt de volgende vraag : ${prompt}, geef het antwoord door deze tekst te lezen ${context}, Negeer hierbij technische codes, bestandsnamen van afbeeldingen of willekeurige nummerreeksen die niet relevant zijn voor de historische inhoud.. Als het antwoord niet in de tekst staat, zeg dat dan eerlijk, Als de informatie verspreid staat, combineer deze dan tot een logisch overzicht..`);
 
 console.log(response.content)

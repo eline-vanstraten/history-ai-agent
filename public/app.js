@@ -77,7 +77,7 @@ async function sendChat(prompt) {
 }
 
 
-sendChat("introduceer jezelf en vertel waarvoor je bent. Vraag ze of ze willen beginnen met het leren van de kenmerkende aspecten en of ze de dobbelsteen willen gooien. Pas zodra een dobbelsteen is gegooid geef je een tijdvak, de kenmerkende aspecten en een image.")
+sendChat("introduceer jezelf en vertel waarvoor je bent. Vraag ze of ze willen beginnen met het leren van de kenmerkende aspecten en of ze de dobbelsteen willen gooien. Pas zodra een dobbelsteen is gegooid geef je een tijdvak, de kenmerkende aspecten en een bijpassende image.")
 
 
 

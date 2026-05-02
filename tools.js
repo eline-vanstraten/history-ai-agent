@@ -14,7 +14,7 @@ export const getDocument = tool(
     async ({ query }) => {
         console.log("🔧 now searching the document store")
 
-        const relevantDocs = await vectorStore.similaritySearch(query, 2)
+        const relevantDocs = await vectorStore.similaritySearch(query, 4)
 
         const context = relevantDocs.map(doc => doc.pageContent).join("\n\n");
 
@@ -66,7 +66,7 @@ export const getHistoricalImage = tool(
     },
     {
         name: "get_image",
-        description: "Zoek een historische afbeelding die past bij een kenmerkend aspect. Negeer nummers en cijfers dus geef daar geen foto's voor.",
+        description: "Zoek een historische afbeelding die past bij de gegeven historische woorden. Negeer en verwijder nummers en cijfers dus geef daar geen foto's voor.",
         schema: {
             type: "object",
             properties: { 
