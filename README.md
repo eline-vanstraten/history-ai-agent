@@ -62,7 +62,7 @@ npm install @langchain/community faiss-node
 cp .env.example .env
 ```
 
-5. Voeg key toe aan .env:
+5. Voeg keys toe aan .env:
 
 ```sh
 AZURE_OPENAI_API_VERSION=your_api_version
