@@ -20,16 +20,16 @@ Een interactieve agent, gebouwd met JavaScript en moderne AI-tools zoals LangCha
 - Interactieve leerervaring met volgorde oefeningen
 - Bijpassende foto per tijdvak
 
-# Tools binnen de agent
-- get_document: Haalt relevante informatie op uit de vector database (PDF content)
-- roll_dice: Genereert een willekeurig getal dat overeenkomt met een tijdvak
-- get_image: Gebruikt de Pexels API op een passende afbeelding te vinden
+# Tools binnen de Agent
+- **get_document**: Haalt relevante informatie op uit de vector database (PDF content)
+- **roll_dice**: Genereert een willekeurig getal dat overeenkomt met een tijdvak
+- **get_image**: Gebruikt de Pexels API op een passende afbeelding te vinden
 
 # Data en Kennisbron
 De agent gebruikt twee PDF-documenten:
 1. Kenmerkende aspecten per tijdvak
    -Overzicht voor HAVO en VWO
-   - Gebruikt voor de oefening volgorde bepalen
+   - Gebruikt voor de oefening: volgorde bepalen
 2. Uitleg per tijdvak
    - Verdiepende informatie
    - Ondersteund begrip en feedback
@@ -78,7 +78,6 @@ PEXELS_API_KEY=your_pexels_api_key
 ```sh
 npm start
 ```
-
 
 ## ✦ Auteur
 
