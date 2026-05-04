@@ -23,7 +23,7 @@ Een interactieve agent, gebouwd met JavaScript en moderne AI-tools zoals LangCha
 # Tools binnen de Agent
 - **get_document**: Haalt relevante informatie op uit de vector database (PDF content)
 - **roll_dice**: Genereert een willekeurig getal dat overeenkomt met een tijdvak
-- **get_image**: Gebruikt de Pexels API op een passende afbeelding te vinden
+- **get_image**: Gebruikt de Pexels API om een passende afbeelding te vinden
 
 # Data en Kennisbron
 De agent gebruikt twee PDF-documenten:
