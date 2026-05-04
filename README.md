@@ -28,7 +28,7 @@ Een interactieve agent, gebouwd met JavaScript en moderne AI-tools zoals LangCha
 # Data en Kennisbron
 De agent gebruikt twee PDF-documenten:
 1. Kenmerkende aspecten per tijdvak
-   -Overzicht voor HAVO en VWO
+   - Overzicht voor HAVO en VWO
    - Gebruikt voor de oefening: volgorde bepalen
 2. Uitleg per tijdvak
    - Verdiepende informatie
