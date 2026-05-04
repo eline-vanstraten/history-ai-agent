@@ -51,9 +51,7 @@ cd history-ai-agent
 3. Installeer dependencies:
 
 ```sh
-npm install langchain @langchain/openai @langchain/core @langchain/langgraph @langchain/classic
-npm install express
-npm install @langchain/community faiss-node
+npm install 
 ```
 
 4. Maak een .env bestand:
@@ -62,14 +60,15 @@ npm install @langchain/community faiss-node
 cp .env.example .env
 ```
 
-5. Voeg keys toe aan .env:
+5. Kopieer in eigen .env en voeg je keys toe:
 
 ```sh
-AZURE_OPENAI_API_VERSION=your_api_version
+AZURE_OPENAI_API_VERSION=2025-03-01-preview
 AZURE_OPENAI_API_INSTANCE_NAME=your_instance_name
 AZURE_OPENAI_API_KEY=your_api_key
-AZURE_OPENAI_API_DEPLOYMENT_NAME=your_deployment_name
-AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=your_embeddings_deployment
+AZURE_OPENAI_API_DEPLOYMENT_NAME=gpt-4.1-mini
+AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=text-embedding-3-small
+
 PEXELS_API_KEY=your_pexels_api_key
 ```
 
